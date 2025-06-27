@@ -1,0 +1,278 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #333; /* Unified background color for consistency */
+    color: #fff;
+}
+
+.main {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.7) 50%), url(cattle2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(51, 51, 51, 0.95); /* Slight transparency for elegance */
+    z-index: 1000;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.logo {
+    color: #ff7200;
+    font-size: 32px;
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: 1px;
+}
+
+.menu ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu ul li {
+    margin-left: 40px;
+    font-size: 16px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #ff7200;
+}
+
+/* Content Styles */
+.content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 120px; /* Adds space below navbar */
+    text-align: left;
+}
+
+.content h1 {
+    font-size: 48px;
+    color: #ff7200;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.content .par {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+/* Call to action button */
+.content .cn {
+    width: 180px;
+    padding: 10px;
+    background-color: #ff7200;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.content .cn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.content .cn:hover {
+    background-color: #fff;
+    color: #ff7200;
+}
+
+/* Form Styles */
+.form {
+    width: 450px;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 30px;
+    border-radius: 12px;
+    margin-top: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form h2 {
+    color: #ff7200;
+    margin-bottom: 20px;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: transparent;
+    border: 1px solid #ff7200;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.form .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff7200;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
+
+.form .btn:hover {
+    background-color: #fff;
+    color: #ff7200;
+}
+
+/* About Section */
+.about-section {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(about-background.jpg);
+    background-size: cover;
+    padding: 50px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.about-section h1 {
+    font-size: 40px;
+    color: #ff7200;
+}
+
+.about-section p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.8;
+}
+
+/* Team Section */
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    width: 300px;
+    margin: 15px;
+    transition: 0.3s;
+    border: 2px solid #ff7200;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #fff;
+}
+
+.card img {
+    width: 100%;
+    border-bottom: 2px solid #ff7200;
+}
+
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+.container h2 {
+    color: #ff7200;
+    margin-bottom: 10px;
+}
+
+.container p {
+    color: #ddd;
+}
+
+.button {
+    background-color: #ff7200;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #ff7200;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #333;
+    padding: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.contact h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 18px;
+}
+
+.contact .contact-details {
+    font-size: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .form {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .about-section, .content {
+        padding: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Project Phase 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#manageUsers">Manage Users</a></li>
+            <li><a href="#generateReports">Generate Reports</a></li>
+            <li><a href="#manageAnimals">Manage Animals</a></li>
+            <li><a href="#settings">Settings</a></li>
+        </ul>
+    </nav>
+
+    <!-- Manage Users Section -->
+    <section id="manageUsers">
+        <h2>Manage Users</h2>
+        <button onclick="addUser()">Add User</button>
+        <button onclick="editUser()">Edit User</button>
+        <button onclick="deleteUser()">Delete User</button>
+        <div id="userList">
+            <!-- Placeholder for user list -->
+            <p>List of all registered users will appear here.</p>
+        </div>
+    </section>
+
+    <!-- Generate Reports Section -->
+    <section id="generateReports">
+        <h2>Generate Reports</h2>
+        <button onclick="generateReport()">Generate Report</button>
+        <div id="reportContent">
+            <!-- Placeholder for generated report -->
+            <p>No report generated yet.</p>
+        </div>
+    </section>
+
+    <!-- Manage Animals Section -->
+    <section id="manageAnimals">
+        <h2>Manage Animals</h2>
+        <button onclick="addAnimal()">Add Animal</button>
+        <button onclick="editAnimal()">Edit Animal</button>
+        <button onclick="deleteAnimal()">Delete Animal</button>
+        <div id="animalList">
+            <!-- Placeholder for animal list -->
+            <p>List of all animals will appear here.</p>
+        </div>
+    </section>
+
+    <!-- Settings Section -->
+    <section id="settings">
+        <h2>Settings</h2>
+        <button onclick="updateSettings()">Update Settings</button>
+        <div id="settingsContent">
+            <p>Configure account, display, and notification settings.</p>
+        </div>
+    </section>
+
+    <!-- Script -->
+    <script src="admin-scripts.js"></script>
+</body>
+</html>
+

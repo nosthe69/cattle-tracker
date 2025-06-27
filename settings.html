@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <img src="cattle2.jpg" class="rounded-circle" width="150">
+            <h2>CattleTracker</h2>
+            <ul>
+                <li><a href="dashboard.php">HOME</a></li>
+                <li><a href="track-cattle.html">TRACK CATTLE</a></li>
+                <li><a href="profile.html">PROFILE</a></li>
+                <li><a href="settings.html">SETTINGS</a></li>
+                <li><a href="index.html">LOGOUT</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <h1>Settings</h1>
+            </div>
+            <div class="content">
+                <h2>Account Settings</h2>
+                <div class="settings-section">
+                    <h3>Change Password</h3>
+                    <form id="password-form">
+                        <label for="current-password">Current Password:</label>
+                        <input type="password" id="current-password" name="current-password" required>
+                        <label for="new-password">New Password:</label>
+                        <input type="password" id="new-password" name="new-password" required>
+                        <label for="confirm-password">Confirm New Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                        <button class="btn" type="submit">Change Password</button>
+                    </form>
+                </div>
+
+                <h2>Display Settings</h2>
+                <div class="settings-section">
+                    <h3>Dark/Light Mode</h3>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <h2>Notification Settings</h2>
+                <div class="settings-section">
+                    <h3>Notification Preferences</h3>
+                    <form id="notification-form">
+                        <label for="email-notifications">Email Notifications:</label>
+                        <input type="checkbox" id="email-notifications" name="email-notifications" checked>
+                        <label for="sms-notifications">SMS Notifications:</label>
+                        <input type="checkbox" id="sms-notifications" name="sms-notifications">
+                        <button class="btn" type="submit">Save Preferences</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('theme-toggle').addEventListener('change', function() {
+            if (this.checked) {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+        });
+    </script>
+</body>
+</html>
+

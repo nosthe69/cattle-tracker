@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <img src="cattle2.jpg" class="rounded-circle" width="150">
+            <h2>CattleTracker</h2>
+            <ul>
+                <li><a href="dashboard.php">HOME</a></li>
+                <li><a href="track-cattle.html">TRACK CATTLE</a></li>
+               
+                <li><a href="profile.html">PROFILE</a></li>
+                <li><a href="settings.html">SETTINGS</a></li>
+                <li><a href="index.html">LOGOUT</a></li>
+            </ul>
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <h1>User Profile</h1>
+            </div>
+            <div id="profile-display">
+                <h2>Personal Information</h2>
+                <p><strong>Name:</strong> <span id="display-name">Zoyisile Ngwadla</span> <button onclick="editField('name')">Edit</button></p>
+                <p><strong>Email:</strong> <span id="display-email">zoyisilengwadla2@gmail.com</span> <button onclick="editField('email')">Edit</button></p>
+                <p><strong>Phone Number:</strong> <span id="display-phone">123-456-7890</span> <button onclick="editField('phone')">Edit</button></p>
+                <p><strong>Profile Picture:</strong> <img src="icon.png" class="rounded-circle"> <button onclick="editField('profile-picture')">Edit</button></p>
+            </div>
+            <div id="profile-edit" style="display:none;">
+                <form id="profile-form">
+                    <h2>Edit Personal Information</h2>
+                    <div id="edit-name" style="display:none;">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" name="first-name" id="first-name" placeholder="First Name" required>
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" name="last-name" id="last-name" placeholder="Last Name" required>
+                    </div>
+                    <div id="edit-email" style="display:none;">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div id="edit-phone" style="display:none;">
+                        <label for="phone">Phone Number:</label>
+                        <input type="text" name="phone" id="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div id="edit-profile-picture" style="display:none;">
+                        <label for="profile-picture">Profile Picture:</label>
+                        <input type="file" name="profile-picture" id="profile-picture" accept="image/*" required>
+                    </div>
+                    <button class="btn-filter" type="button" onclick="saveProfile()">Save Profile</button>
+                </form>
+            </div>
+            <div class="content">
+                <h2>Cattle Information</h2>
+                <p>Manage your cattle below. You can remove any cattle you no longer own or have lost, and add new cattle.</p>
+            
+                <!-- Display the list of added cattle -->
+                <div id="cattle-list">
+                    <h3>Your Cattle List</h3>
+                    <table id="cattle-table">
+                        <thead>
+                            <tr>
+                                <th>Cattle ID</th>
+                                <th>Cattle Name</th>
+                                <th>Breed</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Cattle entries will be dynamically populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            
+                <!-- Button to add a new cow -->
+                <button id="add-cattle-btn" class="btn-filter">Add New Cattle</button>
+            
+                <!-- Form to add new cattle (initially hidden) -->
+                <div id="add-cattle-form" style="display: none;">
+                    <h3>Add New Cattle</h3>
+                    <form id="new-cattle-form">
+                        <label for="cattle-name">Cattle Name:</label>
+                        <input type="text" id="cattle-name" name="cattle-name" required>
+                        
+                        <label for="cattle-breed">Breed:</label>
+                        <input type="text" id="cattle-breed" name="cattle-breed" required>
+            
+                        <button class="btn-filter" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        function editField(field) {
+            document.getElementById('profile-display').style.display = 'none';
+            document.getElementById('profile-edit').style.display = 'block';
+            document.getElementById('edit-' + field).style.display = 'block';
+        }
+
+        function saveProfile() {
+            document.getElementById('profile-display').style.display = 'block';
+            document.getElementById('profile-edit').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

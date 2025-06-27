@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trace Cattle</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <style>
+        .main-content {
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form {
+            width: 100%;
+            max-width: 400px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label, form p {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #qr-reader {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        #qr-upload {
+            margin-bottom: 20px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #results {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="cattle2.jpg" class="rounded-circle" width="150">
+            <h2>CattleTracker</h2>
+        <ul>
+            <li><a href="dashboard.php">HOME</a></li>
+            <li><a href="track-cattle.html">TRACK CATTLE</a></li>
+            
+            <li><a href="profile.html">PROFILE</a></li>
+            <li><a href="settings.html">SETTINGS</a></li>
+            <li><a href="index.html">LOGOUT</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h1>Trace Cattle</h1>
+        </div>
+        <div class="content">
+            <p>Use the QR Code scanner to scan the QR code on the cattle’s tag or upload an image of the QR code.</p>
+            <form id="trace-cattle-form">
+                
+                <div id="qr-reader" style="width: 100%; height: 300px; background-color: #e0e0e0; border-radius: 10px;"></div>
+                <label for="qr-upload">Upload QR Code Image:</label>
+                <input type="file" id="qr-upload" accept="image/*">
+
+                
+                <br><!-- Additional Information Fields -->
+                <label for="location">Location Spotted:</label>
+                <input type="text" id="location" name="location" placeholder="Enter the location where you spotted the cattle" required>
+
+                <br>
+                <label for="description">Additional Information:</label> <br>
+                <textarea id="description" name="description" rows="4" placeholder="Enter any additional information about the cattle or the situation" required></textarea>
+
+        
+                <button class="btn-filter" type="submit">Submit</button>
+            </form>
+            <div id="results">
+                <!-- Results will be displayed here -->
+                <p>No results to display yet.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
